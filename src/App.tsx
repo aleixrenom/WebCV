@@ -1,28 +1,41 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import { ButtonProps } from "./types/types";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import AboutMe from "./pages/AboutMe";
+import Education from "./pages/Education";
+import OtherExperience from "./pages/OtherExperience";
+import WorkExperience from "./pages/WorkExperience";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <Home />,
+    children: [
+      {
+        path: "/education",
+        element: <Education />,
+      },
+      {
+        path: "/aboutme",
+        element: <AboutMe />,
+      },
+      {
+        path: "/workexperience",
+        element: <WorkExperience />,
+      },
+      {
+        path: "/otherexperience",
+        element: <OtherExperience />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const buttons: ButtonProps[] = [
-    {
-      text: "One",
-      onClick: () => {
-        console.log("One");
-      },
-    },
-    { text: "Two" },
-    { text: "Three" },
-  ];
-
-  return (
-    <div>
-      <h1 className="text-center font-bold text-5xl m-5">Aleix Renom Cisa</h1>
-      <div className="NavBar">
-        <Navbar buttons={buttons} />
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

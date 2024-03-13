@@ -1,9 +1,8 @@
-export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+export interface NavButtonProps {
   text: string;
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  className?: string;
+  route: string;
 }
 
 export interface NavbarProps {
-  buttons: ButtonProps[];
+  buttons: NavButtonProps[];
 }
