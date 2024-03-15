@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { NavButtonProps } from "../types/types";
@@ -21,12 +21,15 @@ const buttons: NavButtonProps[] = [
 ];
 
 const Layout = () => {
+  const entryPage: string = "/aboutme";
+
   const location = useLocation();
   const currentPath = location.pathname;
   const navigate = useNavigate();
 
-  // The "About me" page acts as an entry point, showing my general info
-  if (currentPath === "/") navigate("/aboutme");
+  useEffect(() => {
+    if (currentPath === "/") navigate(entryPage);
+  }, [navigate, currentPath]);
 
   return (
     <div>
