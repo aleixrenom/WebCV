@@ -6,13 +6,13 @@ import AboutMe from "./pages/AboutMe";
 import Education from "./pages/Education";
 import OtherExperience from "./pages/OtherExperience";
 import WorkExperience from "./pages/WorkExperience";
-import Home from "./pages/Home";
+import Layout from "./pages/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-    errorElement: <Home />,
+    element: <Layout />,
+    errorElement: <Layout />,
     children: [
       {
         path: "/education",

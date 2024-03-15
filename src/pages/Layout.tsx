@@ -1,11 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { NavButtonProps } from "../types/types";
 import Header from "../components/Header";
 
 const buttons: NavButtonProps[] = [
-  { text: "Home", route: "/" },
   {
     text: "About me",
     route: "/aboutme",
@@ -21,14 +20,21 @@ const buttons: NavButtonProps[] = [
   },
 ];
 
-const Home = () => {
+const Layout = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const navigate = useNavigate();
+
+  // The "About me" page acts as an entry point, showing my general info
+  if (currentPath === "/") navigate("/aboutme");
+
   return (
     <div>
-      <Header header="Aleix Renom Cisa" />
+      <Header header={"Aleix Renom Cisa"} />
       <Navbar buttons={buttons} />
       <Outlet />
     </div>
   );
 };
 
-export default Home;
+export default Layout;
