@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import { NavButtonProps } from "../types/types";
+import Header from "../components/Header";
 
 const buttons: NavButtonProps[] = [
   { text: "Home", route: "/" },
@@ -23,7 +24,7 @@ const buttons: NavButtonProps[] = [
 const Home = () => {
   return (
     <div>
-      <h1 className="text-center font-bold text-5xl m-5">Aleix Renom Cisa</h1>
+      <Header header="Aleix Renom Cisa" />
       <Navbar buttons={buttons} />
       <Outlet />
     </div>

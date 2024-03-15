@@ -6,3 +6,7 @@ export interface NavButtonProps {
 export interface NavbarProps {
   buttons: NavButtonProps[];
 }
+
+export interface HeaderProps {
+  header: string;
+}
