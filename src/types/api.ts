@@ -3,7 +3,7 @@ export interface CvData {
   photoLink: string;
   introduction: string;
   skills: string[];
-  languages: string[];
+  languages: Language[];
   education: Education[];
   workExperience: WorkExperience[];
   otherExperience: OtherExperience[];
@@ -42,4 +42,9 @@ interface OwnProject {
   description?: string;
   takeaways?: string[];
   link?: string;
+}
+
+interface Language {
+  language: string;
+  proficiency: string;
 }

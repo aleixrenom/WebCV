@@ -1,0 +1,103 @@
+{
+  "name": "Aleix Renom Cisa",
+  "photoLink": "https://i.imgur.com/g6Fy3nM.jpeg",
+  "introduction": "I’m a passionate worker who recently finished his bachelor’s degree majoring insoftware development, with work experience in front end development usingReact and TypeScript. My interests center around creating incredible userexperiences both digital and inter-personal, and creating services that arerobust and last for years both on the provider’s servers and in the user’s minds.",
+  "skills": ["TypeScript", "React", "NodeJS", "Self-learning", "Collaboration"],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Catalan",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Finnish",
+      "proficiency": "Intermidiate"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Haaga-Helia UAS",
+      "years": "2019 - 2023",
+      "degree": "Bachelor on Business Information Technology"
+    },
+    {
+      "institution": "EMAV Barcelona",
+      "years": "2013 - 2016",
+      "degree": "Higher vocational education in 3D Animation, Videogames and Interactive Environments"
+    },
+    {
+      "institution": "Escola del Treball de Barcelona",
+      "years": "2010 - 2012",
+      "degree": "Vocational education in Graphical Arts Prepress"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "Supercell",
+      "years": "2022",
+      "position": "Jr. Frontend Developer",
+      "responsibilities": [
+        "Designing and implementing front-end components in React + TypeScript",
+        "Converting AngularJS modules into React",
+        "Functional testing of UI components"
+      ]
+    },
+    {
+      "company": "3D Tech Omega Zeta",
+      "years": "2016",
+      "position": "Software developer",
+      "responsibilities": [
+        "Collaboratively designing interactive applications for professional clients",
+        "Programming the designed applications in Unity using C#"
+      ]
+    },
+    {
+      "company": "Hesinki Lines Oy",
+      "years": "2018 - 2019",
+      "position": "Ticket seller",
+      "responsibilities": [
+        "Proactively selling bus tickets in high volumes, during limited morning hours in a high-stress competitive environment.",
+        "Management of customers and queues while providing thorough city attraction information and general customer service."
+      ]
+    }
+  ],
+  "otherExperience": {
+    "volunteerWork": [
+      {
+        "title": "Volunteer work 1",
+        "year": "2024",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "takeaways": ["One", "Two", "Three"]
+      },
+      {
+        "title": "Volunteer work 2",
+        "year": "2025",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "takeaways": ["Four", "Five", "Six"]
+      }
+    ],
+    "ownProjects": [
+      {
+        "title": "Own project 1",
+        "year": "2026",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "takeaways": ["One", "Two", "Three"],
+        "link": "https://www.lipsum.com/"
+      },
+      {
+        "title": "Own project 2",
+        "year": "2027",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "takeaways": ["Four", "Five", "Six"],
+        "link": ""
+      }
+    ]
+  }
+}
