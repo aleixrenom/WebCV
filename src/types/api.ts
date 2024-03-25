@@ -6,7 +6,7 @@ export interface CvData {
   languages: Language[];
   education: Education[];
   workExperience: WorkExperience[];
-  otherExperience: OtherExperience[];
+  otherExperience: OtherExperience;
 }
 
 interface Education {

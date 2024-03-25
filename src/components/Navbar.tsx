@@ -4,7 +4,7 @@ import { NavbarProps } from "../types/types";
 
 const Navbar = ({ buttons }: NavbarProps) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pb-6">
       {buttons.map((button, index) => (
         <Button key={index} {...button} />
       ))}
