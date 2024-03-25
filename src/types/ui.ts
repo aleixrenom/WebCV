@@ -10,3 +10,7 @@ export interface NavbarProps {
 export interface HeaderProps {
   header: string;
 }
+
+export interface ListProps {
+  elements: string[] | React.ReactElement[];
+}
