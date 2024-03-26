@@ -22,3 +22,7 @@ export interface ProfilePicAndIntroProps {
   textHeader?: string;
   text: string;
 }
+
+export interface ListGroupProps {
+  lists: ListProps[];
+}

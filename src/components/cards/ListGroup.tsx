@@ -1,11 +1,7 @@
 import React from "react";
-import { ListProps } from "../../types/types";
+import { ListGroupProps } from "../../types/types";
 import Card from "../Card";
 import List from "../List";
-
-interface ListGroupProps {
-  lists: ListProps[];
-}
 
 const ListGroup = ({ lists }: ListGroupProps) => {
   return (

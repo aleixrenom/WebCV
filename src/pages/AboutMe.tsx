@@ -4,17 +4,20 @@ import cvData from "../data.json";
 import { CvData, ListProps } from "../types/types";
 import ListGroup from "../components/cards/ListGroup";
 
-interface AboutMeProps {
-  header?: string;
-}
-
 const data: CvData = cvData;
 const lists: ListProps[] = [
   { header: "Skills", elements: data.skills },
-  { header: "Languages", elements: data.skills },
+  {
+    header: "Languages",
+    elements: data.languages.map((e) => (
+      <p>
+        <span>{e.language}</span> - <span>{e.proficiency}</span>
+      </p>
+    )),
+  },
 ];
 
-const AboutMe = ({ header = "About me" }: AboutMeProps) => {
+const AboutMe = () => {
   return (
     <div className="flex flex-col">
       <ProfilePicAndIntro
