@@ -1,12 +1,6 @@
 import React from "react";
 import Card from "../Card";
-
-interface ProfilePicAndIntroProps {
-  imageAddress: string;
-  imageAlt?: string;
-  textHeader?: string;
-  text: string;
-}
+import { ProfilePicAndIntroProps } from "../../types/types";
 
 const ProfilePicAndIntro = ({
   imageAddress,

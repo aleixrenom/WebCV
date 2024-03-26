@@ -13,4 +13,12 @@ export interface HeaderProps {
 
 export interface ListProps {
   elements: string[] | React.ReactElement[];
+  header?: string;
+}
+
+export interface ProfilePicAndIntroProps {
+  imageAddress: string;
+  imageAlt?: string;
+  textHeader?: string;
+  text: string;
 }
