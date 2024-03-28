@@ -26,3 +26,11 @@ export interface ProfilePicAndIntroProps {
 export interface ListGroupProps {
   lists: ListProps[];
 }
+
+export interface ExperienceProps {
+  title: string;
+  subtitle?: string;
+  years: string;
+  takeaways?: string[] | React.ReactElement[];
+  description?: string;
+}
