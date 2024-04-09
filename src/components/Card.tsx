@@ -5,7 +5,7 @@ interface CardProps {
 }
 
 const Card = ({ children }: CardProps) => {
-  return <div className="bg-slate-200 flex flex-row p-5">{children}</div>;
+  return <div className="bg-slate-200 p-5">{children}</div>;
 };
 
 export default Card;

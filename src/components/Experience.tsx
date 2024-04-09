@@ -10,12 +10,17 @@ const Experience = ({
 }: ExperienceProps) => {
   return (
     <div>
-      <div className="bg-slate-400">
-        <p className="flex flex-row">
-          <span className="w-4/12">{title}</span>
-          {subtitle && <span className="w-3/12"> - {subtitle}</span>}
-          <span className="w-2/12">{years}</span>
-        </p>
+      <div
+        id="header"
+        className="bg-green-400 flex flex-row justify-between p-2"
+      >
+        <div id="leftElements" className="flex flex-row">
+          <p className="max-w-80">{title}</p>
+          {subtitle && <p className="max-w-80">{subtitle}</p>}
+        </div>
+        <div id="rightElements">
+          <p className="">{years}</p>
+        </div>
       </div>
     </div>
   );
