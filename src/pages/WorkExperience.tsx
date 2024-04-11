@@ -1,16 +1,31 @@
 import React from "react";
+import { CvData, ExperienceProps } from "../types/types";
+import cvData from "../data.json";
+import Card from "../components/Card";
+import Experience from "../components/Experience";
 
-interface WorkExperienceProps {
-  header?: string;
-}
+const data: CvData = cvData;
 
-const WorkExperience = ({
-  header = "Work experience",
-}: WorkExperienceProps) => {
+const workExperiences: ExperienceProps[] = data.workExperience.map((e) => ({
+  title: e.position,
+  subtitle: e.company,
+  years: e.years,
+  description: e.description,
+  takeaways: e.responsibilities,
+}));
+
+const WorkExperience = () => {
   return (
-    <div>
-      <h1 className="text-bold text-3xl">{header}</h1>
-    </div>
+    <Card>
+      <div className="flex flex-col">
+        {workExperiences &&
+          workExperiences.map((e, index) => (
+            <div className="mb-3">
+              <Experience key={index} {...e} />
+            </div>
+          ))}
+      </div>
+    </Card>
   );
 };
 

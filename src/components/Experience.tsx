@@ -16,12 +16,24 @@ const Experience = ({
       >
         <div id="leftElements" className="flex flex-row">
           <p className="max-w-80">{title}</p>
-          {subtitle && <p className="max-w-80">{subtitle}</p>}
+          {subtitle && <p className="max-w-80 ml-2">{subtitle}</p>}
         </div>
         <div id="rightElements">
           <p className="">{years}</p>
         </div>
       </div>
+      {takeaways && (
+        <div id="takeaways">
+          {takeaways.map((e, index) => (
+            <p key={index}>{e}</p>
+          ))}
+        </div>
+      )}
+      {description && (
+        <div id="description">
+          <p>{description}</p>
+        </div>
+      )}
     </div>
   );
 };

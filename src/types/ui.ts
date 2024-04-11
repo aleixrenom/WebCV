@@ -28,7 +28,7 @@ export interface ListGroupProps {
 }
 
 export interface ExperienceProps {
-  title: string;
+  title: string | React.ReactElement;
   subtitle?: string;
   years: string;
   takeaways?: string[] | React.ReactElement[];
