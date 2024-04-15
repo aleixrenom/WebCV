@@ -8,7 +8,8 @@ export interface NavbarProps {
 }
 
 export interface HeaderProps {
-  header: string;
+  name: string;
+  surname: string;
 }
 
 export interface ListProps {

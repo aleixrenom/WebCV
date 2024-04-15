@@ -33,8 +33,10 @@ const Layout = () => {
 
   return (
     <div>
-      <Header header={"Aleix Renom Cisa"} />
-      <Navbar buttons={buttons} />
+      <div className="flex flex-row justify-between p-4">
+        <Header name="Aleix" surname="Renom Cisa" />
+        <Navbar buttons={buttons} />
+      </div>
       <Outlet />
     </div>
   );
