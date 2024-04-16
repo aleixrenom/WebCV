@@ -24,7 +24,7 @@ const AboutMe = () => {
         imageAddress={data.photoLink}
         imageAlt="Profile picture"
         text={data.introduction}
-        textHeader="Pofile"
+        textHeader="Profile"
       />
       <ListGroup lists={lists} />
     </div>
