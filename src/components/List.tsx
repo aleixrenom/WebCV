@@ -3,8 +3,8 @@ import { ListProps } from "../types/types";
 
 const List = ({ elements, header }: ListProps) => {
   return (
-    <div className="size-full">
-      {header && <h6 className="font-bold">{header}</h6>}
+    <div className="w-4/12">
+      {header && <h6 className="font-medium text-xl mb-1">{header}</h6>}
       <ul>
         {elements.map((e, index) => (
           <li key={index}>{e}</li>

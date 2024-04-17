@@ -9,7 +9,7 @@ const data: CvData = cvData;
 const ownProjects: ExperienceProps[] = data.otherExperience.ownProjects.map(
   (e) => ({
     title: e.link ? (
-      <a href={e.link} className="underline text-blue-700">
+      <a href={e.link} className="underline">
         {e.title}
       </a>
     ) : (
@@ -30,11 +30,13 @@ const volunteerWork: ExperienceProps[] = data.otherExperience.volunteerWork.map(
   })
 );
 
+const sectionStyle: string = "font-extralight text-3xl mb-3";
+
 const OtherExperience = () => {
   return (
     <Card>
       <div className="flex flex-col">
-        <h3>Own Projects</h3>
+        <h3 className={sectionStyle}>Own Projects</h3>
         <div className="flex flex-col">
           {ownProjects &&
             ownProjects.map((e, index) => (
@@ -43,7 +45,7 @@ const OtherExperience = () => {
               </div>
             ))}
         </div>
-        <h3>Volunteer Work</h3>
+        <h3 className={sectionStyle}>Volunteer Work</h3>
         <div className="flex flex-col">
           {volunteerWork &&
             volunteerWork.map((e, index) => (
