@@ -30,7 +30,7 @@ const volunteerWork: ExperienceProps[] = data.otherExperience.volunteerWork.map(
   })
 );
 
-const sectionStyle: string = "font-extralight text-3xl mb-3";
+const sectionStyle: string = "font-extralight text-3xl mb-3 text-secondary";
 
 const OtherExperience = () => {
   return (

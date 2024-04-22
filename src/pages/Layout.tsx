@@ -32,7 +32,7 @@ const Layout = () => {
   }, [navigate, currentPath]);
 
   return (
-    <div>
+    <div className="bg-primary">
       <div className="flex flex-row justify-between p-4">
         <Header name="Aleix" surname="Renom Cisa" />
         <Navbar buttons={buttons} />

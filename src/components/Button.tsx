@@ -9,8 +9,8 @@ const NavButton = ({ text, route }: NavButtonProps) => {
         to={route}
         className={({ isActive }) => {
           return isActive
-            ? "p-2 mx-2 w-20 text-black underline underline-offset-8 decoration-2"
-            : "p-2 mx-2 w-20 text-gray-400 hover:text-gray-800";
+            ? "p-2 mx-2 w-20 text-secondary underline underline-offset-8 decoration-tertiary decoration-2"
+            : "p-2 mx-2 w-20 text-secondary";
         }}
       >
         {text}

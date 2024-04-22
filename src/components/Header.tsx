@@ -4,7 +4,7 @@ import { HeaderProps } from "../types/types";
 const Header = ({ name, surname }: HeaderProps) => {
   return (
     <div>
-      <h1 className="text-xl">
+      <h1 className="text-xl text-secondary">
         <span className="font-bold">{name}</span>{" "}
         <span className="font-thin">{surname}</span>
       </h1>

@@ -12,7 +12,7 @@ const Experience = ({
     <div>
       <div
         id="header"
-        className="bg-blue-700 flex flex-row justify-between p-2 text-white rounded-t-md"
+        className="bg-secondary flex flex-row justify-between p-2 text-primary rounded-md shadow-md"
       >
         <div id="leftElements" className="flex flex-row">
           <p className="max-w-80">{title}</p>
@@ -23,14 +23,14 @@ const Experience = ({
         </div>
       </div>
       {takeaways && (
-        <div id="takeaways" className="bg-blue-200 p-2">
+        <div id="takeaways" className="p-2 text-secondary">
           {takeaways.map((e, index) => (
             <p key={index}>- {e}</p>
           ))}
         </div>
       )}
       {description && (
-        <div id="description" className="bg-blue-100 p-2">
+        <div id="description" className="p-2 text-secondary">
           <p>{description}</p>
         </div>
       )}
