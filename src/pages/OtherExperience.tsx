@@ -30,26 +30,28 @@ const volunteerWork: ExperienceProps[] = data.otherExperience.volunteerWork.map(
   })
 );
 
-const sectionStyle: string = "font-extralight text-3xl mb-3 text-secondary";
+const sectionHeaderStyle: string =
+  "font-extralight text-3xl mb-5 text-secondary";
+const sectionContainerStyle: string = "flex flex-col w-10/12";
 
 const OtherExperience = () => {
   return (
     <Card>
-      <div className="flex flex-col">
-        <h3 className={sectionStyle}>Own Projects</h3>
-        <div className="flex flex-col">
+      <div className="flex flex-col items-center mt-5">
+        <h3 className={sectionHeaderStyle}>Own Projects</h3>
+        <div className={sectionContainerStyle}>
           {ownProjects &&
             ownProjects.map((e, index) => (
-              <div className="mb-3">
+              <div className="mb-10">
                 <Experience key={index} {...e} />
               </div>
             ))}
         </div>
-        <h3 className={sectionStyle}>Volunteer Work</h3>
-        <div className="flex flex-col">
+        <h3 className={sectionHeaderStyle}>Volunteer Work</h3>
+        <div className={sectionContainerStyle}>
           {volunteerWork &&
             volunteerWork.map((e, index) => (
-              <div className="mb-3">
+              <div className="mb-10">
                 <Experience key={index} {...e} />
               </div>
             ))}

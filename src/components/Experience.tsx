@@ -22,18 +22,20 @@ const Experience = ({
           <p className="">{years}</p>
         </div>
       </div>
-      {takeaways && (
-        <div id="takeaways" className="p-2 text-secondary">
-          {takeaways.map((e, index) => (
-            <p key={index}>- {e}</p>
-          ))}
-        </div>
-      )}
-      {description && (
-        <div id="description" className="p-2 text-secondary">
-          <p>{description}</p>
-        </div>
-      )}
+      <div id="info" className="bg-slate-200 rounded-md shadow-md">
+        {takeaways && (
+          <div id="takeaways" className="p-2 text-secondary">
+            {takeaways.map((e, index) => (
+              <p key={index}>- {e}</p>
+            ))}
+          </div>
+        )}
+        {description && (
+          <div id="description" className="p-2 text-secondary">
+            <p>{description}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

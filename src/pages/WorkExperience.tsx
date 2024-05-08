@@ -17,10 +17,10 @@ const workExperiences: ExperienceProps[] = data.workExperience.map((e) => ({
 const WorkExperience = () => {
   return (
     <Card>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center mt-5">
         {workExperiences &&
           workExperiences.map((e, index) => (
-            <div className="mb-3">
+            <div className="mb-10 w-10/12">
               <Experience key={index} {...e} />
             </div>
           ))}
