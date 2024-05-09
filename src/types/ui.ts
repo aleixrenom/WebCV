@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface NavButtonProps {
   text: string;
   route: string;
@@ -20,7 +22,7 @@ export interface ListProps {
 export interface ProfilePicAndIntroProps {
   imageAddress: string;
   imageAlt?: string;
-  textHeader?: string;
+  textHeader?: string | React.ReactElement;
   text: string;
 }
 
