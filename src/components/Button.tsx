@@ -1,22 +1,23 @@
 import React from "react";
-import { NavButtonProps } from "../types/types";
-import { NavLink } from "react-router-dom";
 
-const NavButton = ({ text, route }: NavButtonProps) => {
+interface ButtonProps {
+  name?: string;
+  content?: React.ReactNode | string;
+  onClick?: () => void;
+  twStyle?: string;
+}
+
+const Button = ({
+  name = "button",
+  content = "Button",
+  onClick = () => {},
+  twStyle = "",
+}: ButtonProps) => {
   return (
-    <div>
-      <NavLink
-        to={route}
-        className={({ isActive }) => {
-          return isActive
-            ? "p-2 mx-2 w-20 text-secondary underline underline-offset-8 decoration-tertiary decoration-2"
-            : "p-2 mx-2 w-20 text-secondary";
-        }}
-      >
-        {text}
-      </NavLink>
-    </div>
+    <button className={twStyle} type="button" onClick={onClick}>
+      {content}
+    </button>
   );
 };
 
-export default NavButton;
+export default Button;

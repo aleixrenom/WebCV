@@ -1,5 +1,8 @@
 import React from "react";
 import { ExperienceProps } from "../types/types";
+import Button from "./Button";
+import { ReactComponent as UpArrow } from "./icons/upArrow.svg";
+import { ReactComponent as DownArrow } from "./icons/downArrow.svg";
 
 const Experience = ({
   title,
@@ -18,8 +21,9 @@ const Experience = ({
           <p className="max-w-sm font-bold">{title}</p>
           {subtitle && <p className="max-w-xs font-light">{subtitle}</p>}
         </div>
-        <div id="rightElements" className="flex flex-col justify-center">
-          <p className="font-bold">{years}</p>
+        <div id="rightElements" className="flex flex-row justify-center">
+          <p className="font-bold content-center">{years}</p>
+          <Button content={<UpArrow />} twStyle="ml-3 fill-tertiary" />
         </div>
       </div>
       <div id="info" className="bg-slate-200 rounded-md shadow-md">

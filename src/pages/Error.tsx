@@ -1,5 +1,5 @@
 import React from "react";
-import NavButton from "../components/Button";
+import NavButton from "../components/NavButton";
 
 const Error = () => {
   return (
