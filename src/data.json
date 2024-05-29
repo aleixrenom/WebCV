@@ -71,10 +71,14 @@
   "otherExperience": {
     "volunteerWork": [
       {
-        "title": "Volunteer work 1",
-        "year": "2024",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "takeaways": ["One", "Two", "Three"]
+        "title": "Tenant's Committee chairman",
+        "year": "2023 - 2024",
+        "description": "Though volunteering at my housing complex's Tenant's Committee, first as Secretary and then as Chairman, asdasd asd",
+        "takeaways": [
+          "People management",
+          "Organisation development and maintenance",
+          "Community engagement"
+        ]
       },
       {
         "title": "Volunteer work 2",
@@ -85,18 +89,28 @@
     ],
     "ownProjects": [
       {
-        "title": "Own project 1",
-        "year": "2026",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "takeaways": ["One", "Two", "Three"],
-        "link": "https://www.lipsum.com/"
+        "title": "Web CV (this website)",
+        "year": "2024",
+        "description": "The purpose of this project is to showcase my current software development skills and advance them at the same time. I use Trello for task management, VS Code for coding, and Github for version control.",
+        "takeaways": [
+          "React",
+          "Typescript",
+          "Tailwind",
+          "Node.js",
+          "Web development practices"
+        ],
+        "link": "https://github.com/aleixrenom/WebCV"
       },
       {
-        "title": "Own project 2",
-        "year": "2027",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "takeaways": ["Four", "Five", "Six"],
-        "link": ""
+        "title": "Universtiy projects",
+        "year": "2019 - 2023",
+        "description": "These projects took me from building strong foundations in web and mobile development, to meeting full stack expectations for business clients while working in an agile manner with a multidisciplinary team.",
+        "takeaways": [
+          "Full stack development",
+          "Agile development",
+          "Business thinking"
+        ],
+        "link": "https://github.com/aleixrenom?tab=repositories"
       }
     ]
   }
