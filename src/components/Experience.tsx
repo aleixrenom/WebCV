@@ -11,11 +11,14 @@ const Experience = ({
   takeaways,
   description,
 }: ExperienceProps) => {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <div>
       <div
         id="header"
         className="bg-secondary flex flex-row justify-between p-2 text-primary rounded-md shadow-md"
+        onClick={() => setOpen(!open)}
       >
         <div id="leftElements" className="flex flex-col">
           <p className="max-w-sm font-bold">{title}</p>
@@ -23,10 +26,21 @@ const Experience = ({
         </div>
         <div id="rightElements" className="flex flex-row justify-center">
           <p className="font-bold content-center">{years}</p>
-          <Button content={<UpArrow />} twStyle="ml-3 fill-tertiary" />
+          {(takeaways || description) && (
+            <Button
+              content={open ? <UpArrow /> : <DownArrow />}
+              twStyle="ml-3 fill-tertiary"
+            />
+          )}
         </div>
       </div>
-      <div id="info" className="bg-slate-200 rounded-md shadow-md">
+      <div
+        id="info"
+        className={
+          "bg-slate-200 rounded-md shadow-md transition-all duration-500 " +
+          (open ? "max-h-screen" : "max-h-0 overflow-hidden")
+        }
+      >
         {takeaways && (
           <div id="takeaways" className="p-2">
             {takeaways.map((e, index) => (
