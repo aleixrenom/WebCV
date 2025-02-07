@@ -72,26 +72,21 @@
     "volunteerWork": [
       {
         "title": "Tenant's Committee chairman",
-        "year": "2023 - 2024",
-        "description": "Though volunteering at my housing complex's Tenant's Committee, first as Secretary and then as Chairman, asdasd asd",
+        "year": "2023 - Present",
+        "description": "I volunteer at my housing complex’s Tenant’s Committee, I initially served as Secretary before being elected Chairman. In this role I led Committee meetings, represented tenant interests in discussions with property management, and worked on initiatives to improve the living environment. I handled conflict resolution between residents, organized community events, contributed to maintenance and policy decisions, and streamlined administrative processes.",
         "takeaways": [
-          "People management",
-          "Organisation development and maintenance",
-          "Community engagement"
+          "Leadership and decision-making",
+          "Organisational development and maintenance",
+          "Community engagement",
+          "Project and budget management"
         ]
-      },
-      {
-        "title": "Volunteer work 2",
-        "year": "2025",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "takeaways": ["Four", "Five", "Six"]
       }
     ],
     "ownProjects": [
       {
         "title": "Web CV (this website)",
         "year": "2024",
-        "description": "The purpose of this project is to showcase my current software development skills and advance them at the same time. I use Trello for task management, VS Code for coding, and Github for version control.",
+        "description": "The purpose of this project is to showcase my current software development skills and advance them at the same time. I use Trello for task management, VS Code as IDE, and Github for version control.",
         "takeaways": [
           "React",
           "Typescript",
@@ -102,15 +97,39 @@
         "link": "https://github.com/aleixrenom/WebCV"
       },
       {
+        "title": "Dice math",
+        "year": "2024 - Present",
+        "description": "This is a project I started recently to learn React developemnt for mobile devices through Expo. It will be a simple app to practice quick maths, particularly for dice games and Tabletop role-playing games.",
+        "takeaways": [
+          "React",
+          "Typescript",
+          "Expo",
+          "Node.js",
+          "Mobile development practices"
+        ],
+        "link": "https://github.com/aleixrenom/dice-math"
+      },
+      {
         "title": "Universtiy projects",
         "year": "2019 - 2023",
         "description": "These projects took me from building strong foundations in web and mobile development, to meeting full stack expectations for business clients while working in an agile manner with a multidisciplinary team.",
         "takeaways": [
           "Full stack development",
           "Agile development",
-          "Business thinking"
+          "Business mindset"
         ],
         "link": "https://github.com/aleixrenom?tab=repositories"
+      },
+      {
+        "title": "Tabletop RPG Game Master",
+        "year": "2018 - Present",
+        "description": "In this role, I organize monthly day-long sessions for a team of 4 to 7 people. These sessions are fully collaborative, focusing on creative storytelling through role-playing. My responsibilities include planning and facilitating engaging scenarios where participants work together to solve challenges using creative problem-solving. This requires strong preparation, quick thinking, and the ability to adapt when things don’t go as expected.",
+        "takeaways": [
+          "Leadership and team management",
+          "Agile thinking and improvisation",
+          "Communication and creative problem solving"
+        ],
+        "link": ""
       }
     ]
   }

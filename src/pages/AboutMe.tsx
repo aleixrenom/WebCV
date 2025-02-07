@@ -26,7 +26,7 @@ const AboutMe = () => {
         text={data.introduction}
         textHeader={
           <p>
-            Hi, the name's <span className="font-semibold">Aleix</span>
+            Hi, my name is <span className="font-semibold">Aleix</span>
           </p>
         }
       />
