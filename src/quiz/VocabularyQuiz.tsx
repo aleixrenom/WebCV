@@ -68,10 +68,10 @@ const VocabularyQuiz: React.FC = () => {
     if (isCorrect) {
       setScore((prevScore) => prevScore + 1);
       correctSound.play();
-      // Auto-advance after 1.5 seconds
+      // Auto-advance after 1 second
       setTimeout(() => {
         handleNext();
-      }, 1500);
+      }, 1000);
     } else {
       incorrectSound.play();
     }
@@ -150,18 +150,26 @@ const VocabularyQuiz: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
         >
-          <div className="mb-4">
-            <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-              <div
-                className="bg-blue-500 h-2 rounded-full"
-                style={{
-                  width: `${((currentIndex + 1) / questions.length) * 100}%`,
-                }}
-              ></div>
+          <div className="flex flex-row">
+            <div className="mb-4 w-full">
+              <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
+                <div
+                  className="bg-blue-500 h-2 rounded-full"
+                  style={{
+                    width: `${((currentIndex + 1) / questions.length) * 100}%`,
+                  }}
+                ></div>
+              </div>
+              <p className="text-sm text-gray-600">
+                Question {currentIndex + 1} of {questions.length}
+              </p>
             </div>
-            <p className="text-sm text-gray-600">
-              Question {currentIndex + 1} of {questions.length}
-            </p>
+            <motion.button
+              onClick={resetQuiz}
+              className="text-blue-500 h-8 w-1/2"
+            >
+              Restart quiz
+            </motion.button>
           </div>
           <h2 className="text-xl font-semibold mb-6 text-center">
             {currentQuestion.word}
