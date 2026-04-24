@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Howl } from "howler";
 import vocabData from "./vocabData.json";
@@ -22,17 +22,20 @@ const VocabularyQuiz: React.FC = () => {
   const incorrectSound = new Howl({ src: ["/sounds/incorrect.mp3"] });
 
   // Helper function to shuffle an array
-  const shuffleArray = (array: string[]): string[] => {
+  const shuffleArray = useCallback((array: string[]): string[] => {
     return [...array].sort(() => Math.random() - 0.5);
-  };
+  }, []);
 
   // Helper function to randomize options for each question
-  const randomizeQuestions = (questions: Question[]): Question[] => {
-    return questions.map((question) => ({
-      ...question,
-      options: shuffleArray(question.options),
-    }));
-  };
+  const randomizeQuestions = useCallback(
+    (questions: Question[]): Question[] => {
+      return questions.map((question) => ({
+        ...question,
+        options: shuffleArray(question.options),
+      }));
+    },
+    [shuffleArray],
+  );
 
   useEffect(() => {
     const storedProgress = localStorage.getItem("quizProgress");
@@ -55,7 +58,7 @@ const VocabularyQuiz: React.FC = () => {
         }),
       );
     }
-  }, []);
+  }, [randomizeQuestions]);
 
   const handleAnswerSelect = (answer: string) => {
     if (isAnswered) return;
