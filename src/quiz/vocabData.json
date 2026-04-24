@@ -1,52 +1,722 @@
 [
   {
-    "word": "koira",
-    "correct": "dog",
-    "options": ["dog", "cat", "bird", "fish"]
+    "word": "haaveilija",
+    "correct": "dreamer",
+    "options": ["daydreamer", "dreamer", "wanderer", "schemer"]
   },
   {
-    "word": "kissa",
-    "correct": "cat",
-    "options": ["dog", "cat", "bird", "fish"]
+    "word": "reuna",
+    "correct": "edge",
+    "options": ["edge", "border", "corner", "surface"]
   },
   {
-    "word": "lintu",
-    "correct": "bird",
-    "options": ["dog", "cat", "bird", "fish"]
+    "word": "koulutus",
+    "correct": "education",
+    "options": ["education", "training", "occupation", "knowledge"]
   },
   {
-    "word": "kala",
-    "correct": "fish",
-    "options": ["dog", "cat", "bird", "fish"]
+    "word": "turvallisuus",
+    "correct": "security",
+    "options": ["security", "safety", "certainty", "stability"]
   },
   {
-    "word": "auto",
-    "correct": "car",
-    "options": ["car", "bike", "plane", "train"]
+    "word": "tarjotin",
+    "correct": "tray",
+    "options": ["tray", "plate", "counter", "shelf"]
   },
   {
-    "word": "pyörä",
-    "correct": "bike",
-    "options": ["car", "bike", "plane", "train"]
+    "word": "nyrkkeily",
+    "correct": "boxing",
+    "options": ["boxing", "wrestling", "fencing", "jogging"]
   },
   {
-    "word": "lentokone",
+    "word": "päiväunet",
+    "correct": "nap",
+    "options": ["nap", "siesta", "rest", "dream"]
+  },
+  {
+    "word": "yleensä",
+    "correct": "usually",
+    "options": ["usually", "always", "often", "rarely"]
+  },
+  {
+    "word": "joskus",
+    "correct": "sometimes",
+    "options": ["sometimes", "rarely", "often", "never"]
+  },
+  {
+    "word": "usein",
+    "correct": "often",
+    "options": ["often", "always", "sometimes", "usually"]
+  },
+  {
+    "word": "aina",
+    "correct": "always",
+    "options": ["always", "often", "usually", "still"]
+  },
+  {
+    "word": "harvoin",
+    "correct": "rarely",
+    "options": ["rarely", "sometimes", "seldom enough", "never"]
+  },
+  {
+    "word": "silittää",
+    "correct": "to pet",
+    "options": ["to pet", "to iron", "to stroke", "to smooth"]
+  },
+  {
+    "word": "valehdella",
+    "correct": "to lie",
+    "options": ["to lie", "to exaggerate", "to deceive", "to deny"]
+  },
+  {
+    "word": "suudella",
+    "correct": "to kiss",
+    "options": ["to kiss", "to hug", "to caress", "to whisper"]
+  },
+  {
+    "word": "laiva",
+    "correct": "ship",
+    "options": ["ship", "boat", "ferry", "vessel"]
+  },
+  {
+    "word": "kimppakyyti",
+    "correct": "carpool",
+    "options": ["carpool", "hitchhike", "taxi", "shuttle"]
+  },
+  {
+    "word": "päätellä",
+    "correct": "to deduce",
+    "options": ["to deduce", "to decide", "to conclude", "to guess"]
+  },
+  {
+    "word": "eteinen",
+    "correct": "vestibule",
+    "options": ["vestibule", "hallway", "corridor", "porch"]
+  },
+  {
+    "word": "kaataa",
+    "correct": "to pour",
+    "options": ["to pour", "to spill", "to fill", "to tip"]
+  },
+  {
+    "word": "palata",
+    "correct": "to return",
+    "options": ["to return", "to go back", "to arrive", "to escape"]
+  },
+  {
+    "word": "määränpää",
+    "correct": "destination",
+    "options": ["destination", "direction", "departure", "route"]
+  },
+  {
+    "word": "viivästys",
+    "correct": "delay",
+    "options": ["delay", "cancellation", "detour", "schedule"]
+  },
+  {
+    "word": "ahkera",
+    "correct": "diligent",
+    "options": ["diligent", "honest", "ambitious", "patient"]
+  },
+  {
+    "word": "tehdas",
+    "correct": "factory",
+    "options": ["factory", "warehouse", "workshop", "office"]
+  },
+  {
+    "word": "murre",
+    "correct": "dialect",
+    "options": ["dialect", "accent", "language", "slang"]
+  },
+  {
+    "word": "silta",
+    "correct": "bridge",
+    "options": ["bridge", "tunnel", "path", "crossing"]
+  },
+  {
+    "word": "yläkerta",
+    "correct": "upstairs",
+    "options": ["upstairs", "attic", "upper floor", "downstairs"]
+  },
+  {
+    "word": "alakerta",
+    "correct": "downstairs",
+    "options": ["downstairs", "basement", "ground floor", "upstairs"]
+  },
+  {
+    "word": "likainen",
+    "correct": "dirty",
+    "options": ["dirty", "messy", "muddy", "dusty"]
+  },
+  {
+    "word": "niemi",
+    "correct": "peninsula",
+    "options": ["peninsula", "island", "cape", "bay"]
+  },
+  {
+    "word": "luu",
+    "correct": "bone",
+    "options": ["bone", "joint", "spine", "skull"]
+  },
+  {
+    "word": "hämärä",
+    "correct": "dim",
+    "options": ["dim", "dark", "gloomy", "shadowy"]
+  },
+  {
+    "word": "revontulet",
+    "correct": "northern lights",
+    "options": ["northern lights", "midnight sun", "aurora", "starlight"]
+  },
+  {
+    "word": "sauvat",
+    "correct": "poles",
+    "options": ["poles", "sticks", "skis", "handles"]
+  },
+  {
+    "word": "pulkka",
+    "correct": "sledge",
+    "options": ["sledge", "sled", "toboggan", "sleigh"]
+  },
+  {
+    "word": "sukset",
+    "correct": "skis",
+    "options": ["skis", "skates", "poles", "snowshoes"]
+  },
+  {
+    "word": "luistimet",
+    "correct": "ice skates",
+    "options": ["ice skates", "skis", "snow boots", "sliders"]
+  },
+  {
+    "word": "kypärä",
+    "correct": "helmet",
+    "options": ["helmet", "hat", "visor", "cap"]
+  },
+  {
+    "word": "maila",
+    "correct": "sports stick",
+    "options": ["sports stick", "bat", "racket", "club"]
+  },
+  {
+    "word": "nauttia",
+    "correct": "to enjoy",
+    "options": ["to enjoy", "to partake", "to appreciate", "to relish"]
+  },
+  {
+    "word": "limsa",
+    "correct": "soda",
+    "options": ["soda", "juice", "lemonade", "smoothie"]
+  },
+  {
+    "word": "viettää",
+    "correct": "to celebrate",
+    "options": ["to celebrate", "to spend time", "to enjoy", "to mark"]
+  },
+  {
+    "word": "vinkki",
+    "correct": "tip",
+    "options": ["tip", "hint", "advice", "clue"]
+  },
+  {
+    "word": "perinne",
+    "correct": "tradition",
+    "options": ["tradition", "custom", "culture", "heritage"]
+  },
+  {
+    "word": "polttaa",
+    "correct": "to burn",
+    "options": ["to burn", "to light", "to smoke", "to fire"]
+  },
+  {
+    "word": "loistaa",
+    "correct": "to shine",
+    "options": ["to shine", "to glow", "to sparkle", "to beam"]
+  },
+  {
+    "word": "kuulua",
+    "correct": "to belong",
+    "options": ["to belong", "to fit", "to include", "to connect"]
+  },
+  {
+    "word": "järjestää",
+    "correct": "to arrange",
+    "options": ["to arrange", "to organize", "to establish", "to plan"]
+  },
+  {
+    "word": "heittää",
+    "correct": "to throw",
+    "options": ["to throw", "to toss", "to fling", "to drop"]
+  },
+  {
+    "word": "kantaa",
+    "correct": "to carry",
+    "options": ["to carry", "to hold", "to lift", "to drag"]
+  },
+  {
+    "word": "nukahtaa",
+    "correct": "to fall asleep",
+    "options": ["to fall asleep", "to rest", "to doze", "to sleep"]
+  },
+  {
+    "word": "kuorsata",
+    "correct": "to snore",
+    "options": ["to snore", "to breathe heavily", "to grunt", "to murmur"]
+  },
+  {
+    "word": "osata",
+    "correct": "to know how",
+    "options": ["to know how", "to be able to", "to learn", "to understand"]
+  },
+  {
+    "word": "eväät",
+    "correct": "packed lunch",
+    "options": ["packed lunch", "snack", "provisions", "leftovers"]
+  },
+  {
+    "word": "nukke",
+    "correct": "doll",
+    "options": ["doll", "puppet", "toy", "figurine"]
+  },
+  {
+    "word": "maja",
+    "correct": "hut",
+    "options": ["hut", "shelter", "cabin", "shed"]
+  },
+  {
+    "word": "tutkia",
+    "correct": "to investigate",
+    "options": ["to investigate", "to explore", "to study", "to examine"]
+  },
+  {
+    "word": "läheinen",
+    "correct": "close one",
+    "options": ["close one", "relative", "neighbour", "companion"]
+  },
+  {
+    "word": "kasvattaa",
+    "correct": "to raise",
+    "options": ["to raise", "to educate", "to nurture", "to foster"]
+  },
+  {
+    "word": "päättää",
+    "correct": "to decide",
+    "options": ["to decide", "to end", "to choose", "to conclude"]
+  },
+  {
+    "word": "jännittää",
+    "correct": "to excite",
+    "options": ["to excite", "to tense", "to stress", "to worry"]
+  },
+  {
+    "word": "haikea",
+    "correct": "bittersweet",
+    "options": ["bittersweet", "melancholic", "wistful", "nostalgic"]
+  },
+  {
+    "word": "suuttua",
+    "correct": "to get angry",
+    "options": ["to get angry", "to be annoyed", "to rage", "to snap"]
+  },
+  {
+    "word": "vaihtaa",
+    "correct": "to exchange",
+    "options": ["to exchange", "to switch", "to change", "to replace"]
+  },
+  {
+    "word": "sukeltaa",
+    "correct": "to dive",
+    "options": ["to dive", "to swim", "to submerge", "to plunge"]
+  },
+  {
+    "word": "valtameri",
+    "correct": "ocean",
+    "options": ["ocean", "sea", "gulf", "lake"]
+  },
+  {
+    "word": "verho",
+    "correct": "curtain",
+    "options": ["curtain", "blinds", "drape", "screen"]
+  },
+  {
+    "word": "riisua",
+    "correct": "to undress",
+    "options": ["to undress", "to strip", "to take off", "to disrobe"]
+  },
+  {
+    "word": "pukea",
+    "correct": "to get dressed",
+    "options": ["to get dressed", "to wear", "to put on", "to clothe"]
+  },
+  {
+    "word": "vahingossa",
+    "correct": "accidentally",
+    "options": ["accidentally", "suddenly", "carelessly", "mistakenly"]
+  },
+  {
+    "word": "leivänpaahdin",
+    "correct": "toaster",
+    "options": ["toaster", "oven", "grill", "microwave"]
+  },
+  {
+    "word": "laturi",
+    "correct": "charger",
+    "options": ["charger", "adapter", "battery", "cable"]
+  },
+  {
+    "word": "akku",
+    "correct": "battery",
+    "options": ["battery", "charger", "power bank", "cable"]
+  },
+  {
+    "word": "vetää",
+    "correct": "to pull",
+    "options": ["to pull", "to drag", "to draw", "to haul"]
+  },
+  {
+    "word": "hankala",
+    "correct": "awkward",
+    "options": ["awkward", "tricky", "difficult", "uncomfortable"]
+  },
+  {
+    "word": "saippua",
+    "correct": "soap",
+    "options": ["soap", "shampoo", "detergent", "lotion"]
+  },
+  {
+    "word": "huovutus",
+    "correct": "felting",
+    "options": ["felting", "weaving", "knitting", "fulling"]
+  },
+  {
+    "word": "lompakko",
+    "correct": "wallet",
+    "options": ["wallet", "purse", "bag", "pouch"]
+  },
+  {
+    "word": "sattuma",
+    "correct": "coincidence",
+    "options": ["coincidence", "accident", "chance", "luck"]
+  },
+  {
+    "word": "vika",
+    "correct": "fault",
+    "options": ["fault", "bug", "problem", "defect"]
+  },
+  {
+    "word": "pyytää",
+    "correct": "to request",
+    "options": ["to request", "to ask", "to demand", "to invite"]
+  },
+  {
+    "word": "tukos",
+    "correct": "blockage",
+    "options": ["blockage", "clog", "obstruction", "plug"]
+  },
+  {
+    "word": "maalata",
+    "correct": "to paint",
+    "options": ["to paint", "to colour", "to coat", "to draw"]
+  },
+  {
+    "word": "kerätä",
+    "correct": "to collect",
+    "options": ["to collect", "to gather", "to pick", "to accumulate"]
+  },
+  {
+    "word": "päästä",
+    "correct": "to reach",
+    "options": ["to reach", "to get to", "to be allowed", "to arrive"]
+  },
+  {
+    "word": "tarkastus",
+    "correct": "inspection",
+    "options": ["inspection", "review", "check-up", "audit"]
+  },
+  {
+    "word": "suhde",
+    "correct": "relationship",
+    "options": ["relationship", "connection", "bond", "partnership"]
+  },
+  {
+    "word": "ilmoittautua",
+    "correct": "to register",
+    "options": ["to register", "to sign up", "to apply", "to enrol"]
+  },
+  {
+    "word": "sairastaa",
+    "correct": "to be sick",
+    "options": ["to be sick", "to fall ill", "to suffer", "to recover"]
+  },
+  {
+    "word": "käsitellä",
+    "correct": "to process",
+    "options": ["to process", "to handle", "to deal with", "to manage"]
+  },
+  {
+    "word": "päivystys",
+    "correct": "emergency service",
+    "options": ["emergency service", "on-call duty", "helpline", "hotline"]
+  },
+  {
+    "word": "lomake",
+    "correct": "form",
+    "options": ["form", "document", "field", "application"]
+  },
+  {
+    "word": "putki",
+    "correct": "pipe",
+    "options": ["pipe", "tube", "duct", "drain"]
+  },
+  {
+    "word": "neliö",
+    "correct": "square",
+    "options": ["square", "rectangle", "meter", "area"]
+  },
+  {
+    "word": "varastaa",
+    "correct": "to steal",
+    "options": ["to steal", "to take", "to rob", "to smuggle"]
+  },
+  {
+    "word": "vasara",
+    "correct": "hammer",
+    "options": ["hammer", "mallet", "wrench", "axe"]
+  },
+  {
+    "word": "saha",
+    "correct": "saw",
+    "options": ["saw", "drill", "chisel", "file"]
+  },
+  {
+    "word": "rullamitta",
+    "correct": "measuring tape",
+    "options": ["measuring tape", "ruler", "gauge", "scale"]
+  },
+  {
+    "word": "pora",
+    "correct": "drill",
+    "options": ["drill", "saw", "screwdriver", "chisel"]
+  },
+  {
+    "word": "reikä",
+    "correct": "hole",
+    "options": ["hole", "gap", "crack", "notch"]
+  },
+  {
+    "word": "ruuvi",
+    "correct": "screw",
+    "options": ["screw", "nail", "bolt", "pin"]
+  },
+  {
+    "word": "ruuvimeisseli",
+    "correct": "screwdriver",
+    "options": ["screwdriver", "wrench", "allen key", "chisel"]
+  },
+  {
+    "word": "rauta",
+    "correct": "iron",
+    "options": ["iron", "steel", "metal", "wire"]
+  },
+  {
+    "word": "lapio",
+    "correct": "shovel",
+    "options": ["shovel", "spade", "trowel", "rake"]
+  },
+  {
+    "word": "taltta",
+    "correct": "chisel",
+    "options": ["chisel", "drill", "wedge", "file"]
+  },
+  {
+    "word": "kirves",
+    "correct": "axe",
+    "options": ["axe", "hatchet", "hammer", "saw"]
+  },
+  {
+    "word": "pihdit",
+    "correct": "pliers",
+    "options": ["pliers", "clamps", "tongs", "tweezers"]
+  },
+  {
+    "word": "höylä",
     "correct": "plane",
-    "options": ["car", "bike", "plane", "train"]
+    "options": ["plane", "sander", "scraper", "chisel"]
   },
   {
-    "word": "juna",
-    "correct": "train",
-    "options": ["car", "bike", "plane", "train"]
+    "word": "lipasto",
+    "correct": "dresser",
+    "options": ["dresser", "wardrobe", "cabinet", "shelf"]
   },
   {
-    "word": "talo",
-    "correct": "house",
-    "options": ["house", "apartment", "office", "school"]
+    "word": "kurja",
+    "correct": "miserable",
+    "options": ["miserable", "wretched", "pitiful", "dreadful"]
   },
   {
-    "word": "koulu",
-    "correct": "school",
-    "options": ["house", "apartment", "office", "school"]
+    "word": "levoton",
+    "correct": "restless",
+    "options": ["restless", "troubled", "anxious", "unsettled"]
+  },
+  {
+    "word": "tuuri",
+    "correct": "luck",
+    "options": ["luck", "fortune", "chance", "fate"]
+  },
+  {
+    "word": "kauhea",
+    "correct": "horrible",
+    "options": ["horrible", "dreadful", "awful", "terrible"]
+  },
+  {
+    "word": "köyhyys",
+    "correct": "poverty",
+    "options": ["poverty", "misery", "shortage", "inequality"]
+  },
+  {
+    "word": "kestää",
+    "correct": "to endure",
+    "options": ["to endure", "to withstand", "to last", "to bear"]
+  },
+  {
+    "word": "suojelu",
+    "correct": "protection",
+    "options": ["protection", "conservation", "refuge", "defence"]
+  },
+  {
+    "word": "kärsiä",
+    "correct": "to suffer",
+    "options": ["to suffer", "to endure", "to undergo", "to ache"]
+  },
+  {
+    "word": "pystyä",
+    "correct": "to be capable",
+    "options": ["to be capable", "to manage", "to succeed", "to handle"]
+  },
+  {
+    "word": "meteli",
+    "correct": "uproar",
+    "options": ["uproar", "noise", "racket", "commotion"]
+  },
+  {
+    "word": "valitus",
+    "correct": "complaint",
+    "options": ["complaint", "appeal", "lament", "protest"]
+  },
+  {
+    "word": "maali",
+    "correct": "paint",
+    "options": ["paint", "dye", "varnish", "coating"]
+  },
+  {
+    "word": "remontti",
+    "correct": "renovation",
+    "options": ["renovation", "repair", "remodelling", "maintenance"]
+  },
+  {
+    "word": "pensseli",
+    "correct": "brush",
+    "options": ["brush", "roller", "sponge", "cloth"]
+  },
+  {
+    "word": "ämpäri",
+    "correct": "bucket",
+    "options": ["bucket", "bin", "tub", "barrel"]
+  },
+  {
+    "word": "uhri",
+    "correct": "victim",
+    "options": ["victim", "target", "suspect", "witness"]
+  },
+  {
+    "word": "sijaita",
+    "correct": "to be located",
+    "options": ["to be located", "to be situated", "to exist", "to stand"]
+  },
+  {
+    "word": "omistaja",
+    "correct": "owner",
+    "options": ["owner", "manager", "founder", "director"]
+  },
+  {
+    "word": "perustaa",
+    "correct": "to found",
+    "options": ["to found", "to establish", "to create", "to launch"]
+  },
+  {
+    "word": "rohkeasti",
+    "correct": "bravely",
+    "options": ["bravely", "boldly", "courageously", "confidently"]
+  },
+  {
+    "word": "lammas",
+    "correct": "lamb",
+    "options": ["lamb", "sheep", "goat", "wool"]
+  },
+  {
+    "word": "villa",
+    "correct": "wool",
+    "options": ["wool", "cotton", "fiber", "fleece"]
+  },
+  {
+    "word": "kevyt",
+    "correct": "light",
+    "options": ["light", "soft", "thin", "delicate"]
+  },
+  {
+    "word": "naama",
+    "correct": "face",
+    "options": ["face", "head", "cheek", "expression"]
+  },
+  {
+    "word": "yksinkertainen",
+    "correct": "simple",
+    "options": ["simple", "easy", "plain", "basic"]
+  },
+  {
+    "word": "kiertää",
+    "correct": "to circumvent",
+    "options": ["to circumvent", "to surround", "to bypass", "to revolve"]
+  },
+  {
+    "word": "tila",
+    "correct": "space",
+    "options": ["space", "room", "area", "place"]
+  },
+  {
+    "word": "kokemus",
+    "correct": "experience",
+    "options": ["experience", "knowledge", "memory", "feeling"]
+  },
+  {
+    "word": "menneisyys",
+    "correct": "past",
+    "options": ["past", "history", "memory", "background"]
+  },
+  {
+    "word": "suloinen",
+    "correct": "adorable",
+    "options": ["adorable", "lovely", "cute", "sweet"]
+  },
+  {
+    "word": "rakastua",
+    "correct": "to fall in love",
+    "options": ["to fall in love", "to love", "to adore", "to cherish"]
+  },
+  {
+    "word": "pysäköidä",
+    "correct": "to park",
+    "options": ["to park", "to stop", "to station", "to leave"]
+  },
+  {
+    "word": "vaeltaa",
+    "correct": "to roam",
+    "options": ["to roam", "to wander", "to hike", "to stroll"]
+  },
+  {
+    "word": "retkeillä",
+    "correct": "to hike",
+    "options": ["to hike", "to camp", "to excursion", "to explore"]
   }
 ]
