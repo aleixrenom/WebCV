@@ -8,6 +8,7 @@ import OtherExperience from "./pages/OtherExperience";
 import WorkExperience from "./pages/WorkExperience";
 import Layout from "./pages/Layout";
 import Error from "./pages/Error";
+import VocabularyQuiz from "./quiz/VocabularyQuiz";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         element: <OtherExperience />,
       },
     ],
+  },
+  {
+    path: "/quiz",
+    element: <VocabularyQuiz />,
   },
 ]);
 

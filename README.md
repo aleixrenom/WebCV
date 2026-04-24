@@ -1,3 +1,5 @@
+See the website live at https://aleixcv.vercel.app/
+
 # Web CV
 
 The purpose of this project is to showcase my current software development skills and advance them at the same time. My aim is to start with the front end functionality, then the styling, and then try my hand at back-end.

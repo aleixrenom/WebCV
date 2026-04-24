@@ -1,0 +1,52 @@
+[
+  {
+    "word": "koira",
+    "correct": "dog",
+    "options": ["dog", "cat", "bird", "fish"]
+  },
+  {
+    "word": "kissa",
+    "correct": "cat",
+    "options": ["dog", "cat", "bird", "fish"]
+  },
+  {
+    "word": "lintu",
+    "correct": "bird",
+    "options": ["dog", "cat", "bird", "fish"]
+  },
+  {
+    "word": "kala",
+    "correct": "fish",
+    "options": ["dog", "cat", "bird", "fish"]
+  },
+  {
+    "word": "auto",
+    "correct": "car",
+    "options": ["car", "bike", "plane", "train"]
+  },
+  {
+    "word": "pyörä",
+    "correct": "bike",
+    "options": ["car", "bike", "plane", "train"]
+  },
+  {
+    "word": "lentokone",
+    "correct": "plane",
+    "options": ["car", "bike", "plane", "train"]
+  },
+  {
+    "word": "juna",
+    "correct": "train",
+    "options": ["car", "bike", "plane", "train"]
+  },
+  {
+    "word": "talo",
+    "correct": "house",
+    "options": ["house", "apartment", "office", "school"]
+  },
+  {
+    "word": "koulu",
+    "correct": "school",
+    "options": ["house", "apartment", "office", "school"]
+  }
+]
