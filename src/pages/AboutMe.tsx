@@ -51,7 +51,9 @@ const slogans = [
 ];
 
 const AboutMe = () => {
-  const [num, setNum] = React.useState(0);
+  const [num] = React.useState(() =>
+    Math.floor(Math.random() * slogans.length),
+  );
   return (
     <div className="flex flex-col">
       <ProfilePicAndIntro
