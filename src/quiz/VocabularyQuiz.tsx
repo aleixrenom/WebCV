@@ -21,6 +21,19 @@ const VocabularyQuiz: React.FC = () => {
   const correctSound = new Howl({ src: ["/sounds/correct.mp3"] });
   const incorrectSound = new Howl({ src: ["/sounds/incorrect.mp3"] });
 
+  // Helper function to shuffle an array
+  const shuffleArray = (array: string[]): string[] => {
+    return [...array].sort(() => Math.random() - 0.5);
+  };
+
+  // Helper function to randomize options for each question
+  const randomizeQuestions = (questions: Question[]): Question[] => {
+    return questions.map((question) => ({
+      ...question,
+      options: shuffleArray(question.options),
+    }));
+  };
+
   useEffect(() => {
     const storedProgress = localStorage.getItem("quizProgress");
     if (storedProgress) {
@@ -29,13 +42,14 @@ const VocabularyQuiz: React.FC = () => {
       setCurrentIndex(progress.currentIndex);
       setScore(progress.score);
     } else {
-      // Randomize questions
+      // Randomize questions and their options
       const shuffled = [...vocabData].sort(() => Math.random() - 0.5);
-      setQuestions(shuffled);
+      const randomized = randomizeQuestions(shuffled);
+      setQuestions(randomized);
       localStorage.setItem(
         "quizProgress",
         JSON.stringify({
-          questions: shuffled,
+          questions: randomized,
           currentIndex: 0,
           score: 0,
         }),
@@ -91,7 +105,8 @@ const VocabularyQuiz: React.FC = () => {
     setShowResults(false);
     // Re-randomize
     const shuffled = [...vocabData].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled);
+    const randomized = randomizeQuestions(shuffled);
+    setQuestions(randomized);
   };
 
   if (questions.length === 0) return <div>Loading...</div>;
