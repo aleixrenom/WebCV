@@ -202,16 +202,6 @@ const VocabularyQuiz: React.FC = () => {
               </motion.button>
             ))}
           </div>
-          {isAnswered && selectedAnswer !== currentQuestion.correct && (
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              onClick={handleNext}
-              className="w-full mt-6 bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600"
-            >
-              {currentIndex + 1 < questions.length ? "Next" : "Finish"}
-            </motion.button>
-          )}
         </motion.div>
       </AnimatePresence>
     </div>
