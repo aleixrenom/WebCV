@@ -74,6 +74,10 @@ const VocabularyQuiz: React.FC = () => {
       }, 1000);
     } else {
       incorrectSound.play();
+      // Auto-advance after 1.5 seconds
+      setTimeout(() => {
+        handleNext();
+      }, 1500);
     }
   };
 
