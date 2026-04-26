@@ -16,6 +16,7 @@ const VocabularyQuiz: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   // Sounds
   const correctSound = new Howl({ src: ["/sounds/correct.mp3"] });
@@ -102,6 +103,10 @@ const VocabularyQuiz: React.FC = () => {
     }
   };
 
+  const cancelReset = () => {
+    setShowResetConfirm(false);
+  };
+
   const resetQuiz = () => {
     localStorage.removeItem("quizProgress");
     setQuestions([]);
@@ -110,10 +115,15 @@ const VocabularyQuiz: React.FC = () => {
     setSelectedAnswer(null);
     setIsAnswered(false);
     setShowResults(false);
+    setShowResetConfirm(false);
     // Re-randomize
     const shuffled = [...vocabData].sort(() => Math.random() - 0.5);
     const randomized = randomizeQuestions(shuffled);
     setQuestions(randomized);
+  };
+
+  const handleResetClick = () => {
+    setShowResetConfirm(true);
   };
 
   if (questions.length === 0) return <div>Loading...</div>;
@@ -152,32 +162,59 @@ const VocabularyQuiz: React.FC = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -300, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+          className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
         >
-          <div className="flex flex-row">
-            <div className="mb-4 w-full">
-              <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-                <div
-                  className="bg-blue-500 h-2 rounded-full"
-                  style={{
-                    width: `${((currentIndex + 1) / questions.length) * 100}%`,
-                  }}
-                ></div>
-              </div>
-              <p className="text-sm text-gray-600">
-                Question {currentIndex + 1} of {questions.length}
-              </p>
-            </div>
+          <div className="flex items-center justify-between gap-4 mb-4">
+            <p className="text-sm text-gray-600 font-medium">
+              {currentIndex + 1} / {questions.length}
+            </p>
+            <h2 className="flex-1 text-center text-xl font-semibold">
+              {currentQuestion.word}
+            </h2>
             <motion.button
-              onClick={resetQuiz}
-              className="text-blue-500 h-8 w-1/2"
+              onClick={handleResetClick}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full text-blue-500 transition-colors hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              aria-label="Reset quiz"
             >
-              Restart quiz
+              <svg
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="23 4 23 10 17 10" />
+                <polyline points="1 20 1 14 7 14" />
+                <path d="M3.51 9a9 9 0 0114.13-3.36L23 10" />
+                <path d="M20.49 15a9 9 0 01-14.13 3.36L1 14" />
+              </svg>
             </motion.button>
           </div>
-          <h2 className="text-xl font-semibold mb-6 text-center">
-            {currentQuestion.word}
-          </h2>
+          {showResetConfirm && (
+            <div className="mb-4 rounded-lg border border-blue-100 bg-blue-50 px-3 py-3 text-sm text-blue-700">
+              <div className="flex items-center justify-between gap-3">
+                <span>Reset quiz and lose current progress?</span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={cancelReset}
+                    className="rounded border border-blue-200 px-2 py-1 text-blue-700 hover:bg-blue-100"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={resetQuiz}
+                    className="rounded bg-blue-500 px-2 py-1 text-white hover:bg-blue-600"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           <div className="space-y-3">
             {currentQuestion.options.map((option, index) => (
               <motion.button
