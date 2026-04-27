@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Howl } from "howler";
-import vocabData from "./vocabData.json";
+import vocabData from "./wordSets/1000words.json";
 
 interface Question {
   word: string;
