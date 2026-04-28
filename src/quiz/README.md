@@ -4,12 +4,12 @@ A simple, mobile-focused vocabulary quiz web application where users translate F
 
 ## Features
 
-- **Randomization**: Questions are randomized once at the start of the quiz.
-- **Progress Persistence**: Quiz progress (current question and score) is stored in localStorage, allowing users to resume where they left off.
-- **Satisfying UX**: Includes smooth animations (slide transitions between questions, feedback effects) and subtle sound effects for correct/incorrect answers.
-- **Minimal Design**: Follows proven UX standards with a clean, centered layout, reduced top-left question count, and immediate feedback.
-- **Fast Interaction**: Auto-advances to the next question on correct answers; requires manual "Next" click on incorrect answers, with the correct answer highlighted.
-- **Clean UI**: No question progress bar, a compact `XX / YY` question display, and a small circular reset icon in the top-right corner.
+- **Learning first**: Incorrect answers are not discarded. Failed words are moved deeper into the quiz so users get another chance later.
+- **Adaptive flow**: Correct answers remove the word from the queue, while incorrect answers reappear after 10 words or at the end if fewer than 10 remain.
+- **Progress persistence**: Quiz progress is stored in localStorage so users can resume from the same word queue.
+- **Satisfying UX**: Smooth animations, clear feedback, and sound effects for correct/incorrect answers.
+- **Minimal Design**: Clean centered layout, compact `XX / YY` progress display, and a small circular reset icon in the top-right corner.
+- **Completion screen**: The final screen congratulates the user for finishing the quiz and offers a restart option instead of a score.
 
 ## Requirements
 

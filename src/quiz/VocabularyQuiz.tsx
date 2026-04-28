@@ -4,6 +4,7 @@ import { Howl } from "howler";
 import vocabData from "./wordSets/1000words.json";
 
 interface Question {
+  id: string;
   word: string;
   correct: string;
   options: string[];
@@ -11,95 +12,126 @@ interface Question {
 
 const VocabularyQuiz: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [questionKey, setQuestionKey] = useState(0);
+  const [exitDirection, setExitDirection] = useState<"left" | "right">("left");
 
-  // Sounds
   const correctSound = new Howl({ src: ["/sounds/correct.mp3"] });
   const incorrectSound = new Howl({ src: ["/sounds/incorrect.mp3"] });
 
-  // Helper function to shuffle an array
+  const totalQuestions = vocabData.length;
+
   const shuffleArray = useCallback((array: string[]): string[] => {
     return [...array].sort(() => Math.random() - 0.5);
   }, []);
 
-  // Helper function to randomize options for each question
   const randomizeQuestions = useCallback(
     (questions: Question[]): Question[] => {
-      return questions.map((question) => ({
-        ...question,
-        options: shuffleArray(question.options),
-      }));
+      return questions
+        .map((question) => ({
+          ...question,
+          options: shuffleArray(question.options),
+        }))
+        .sort(() => Math.random() - 0.5);
     },
     [shuffleArray],
   );
 
+  const addIdsToStoredQuestions = useCallback(
+    (storedQuestions: Array<Partial<Question>>): Question[] => {
+      return storedQuestions.map((question, index) => ({
+        id:
+          question.id ||
+          `${question.word ?? "question"}-${index}-${Math.random().toString(36).slice(2, 6)}`,
+        word: question.word ?? "",
+        correct: question.correct ?? "",
+        options: question.options ?? [],
+      }));
+    },
+    [],
+  );
+
+  const createNewQuestionQueue = useCallback((): Question[] => {
+    const withIds = vocabData.map((question, index) => ({
+      ...question,
+      id: `${question.word}-${index}-${Math.random().toString(36).slice(2, 6)}`,
+    }));
+
+    return randomizeQuestions(withIds);
+  }, [randomizeQuestions]);
+
   useEffect(() => {
     const storedProgress = localStorage.getItem("quizProgress");
     if (storedProgress) {
-      const progress = JSON.parse(storedProgress);
-      setQuestions(progress.questions);
-      setCurrentIndex(progress.currentIndex);
-      setScore(progress.score);
+      try {
+        const parsed = JSON.parse(storedProgress);
+        const normalized = addIdsToStoredQuestions(parsed);
+        setQuestions(normalized);
+      } catch {
+        setQuestions(createNewQuestionQueue());
+      }
     } else {
-      // Randomize questions and their options
-      const shuffled = [...vocabData].sort(() => Math.random() - 0.5);
-      const randomized = randomizeQuestions(shuffled);
-      setQuestions(randomized);
-      localStorage.setItem(
-        "quizProgress",
-        JSON.stringify({
-          questions: randomized,
-          currentIndex: 0,
-          score: 0,
-        }),
-      );
+      setQuestions(createNewQuestionQueue());
     }
-  }, [randomizeQuestions]);
+  }, [addIdsToStoredQuestions, createNewQuestionQueue]);
+
+  const persistQuestions = useCallback((updatedQuestions: Question[]) => {
+    if (updatedQuestions.length === 0) {
+      localStorage.removeItem("quizProgress");
+      return;
+    }
+    localStorage.setItem("quizProgress", JSON.stringify(updatedQuestions));
+  }, []);
+
+  const handleQuestionAdvance = useCallback(
+    (updatedQuestions: Question[]) => {
+      if (updatedQuestions.length === 0) {
+        setQuestions([]);
+        setShowResults(true);
+        persistQuestions([]);
+      } else {
+        setQuestions(updatedQuestions);
+        setSelectedAnswer(null);
+        setIsAnswered(false);
+        setQuestionKey((prev) => prev + 1);
+        persistQuestions(updatedQuestions);
+      }
+    },
+    [persistQuestions],
+  );
 
   const handleAnswerSelect = (answer: string) => {
-    if (isAnswered) return;
+    if (isAnswered || questions.length === 0) return;
+
+    const currentQuestion = questions[0];
     setSelectedAnswer(answer);
     setIsAnswered(true);
-    const isCorrect = answer === questions[currentIndex].correct;
-    if (isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-      correctSound.play();
-      // Auto-advance after 1 second
-      setTimeout(() => {
-        handleNext();
-      }, 1000);
-    } else {
-      incorrectSound.play();
-      // Auto-advance after 1.5 seconds
-      setTimeout(() => {
-        handleNext();
-      }, 1500);
-    }
-  };
+    const isCorrect = answer === currentQuestion.correct;
 
-  const handleNext = () => {
-    const nextIndex = currentIndex + 1;
-    if (nextIndex < questions.length) {
-      setCurrentIndex(nextIndex);
-      setSelectedAnswer(null);
-      setIsAnswered(false);
-      // Update localStorage
-      localStorage.setItem(
-        "quizProgress",
-        JSON.stringify({
-          questions,
-          currentIndex: nextIndex,
-          score,
-        }),
-      );
+    if (isCorrect) {
+      setExitDirection("left");
+      correctSound.play();
+      const nextQuestions = questions.slice(1);
+      setTimeout(() => {
+        handleQuestionAdvance(nextQuestions);
+      }, 500);
     } else {
-      setShowResults(true);
-      localStorage.removeItem("quizProgress"); // Clear on completion
+      setExitDirection("right");
+      incorrectSound.play();
+      const remaining = questions.slice(1);
+      const insertionIndex = remaining.length <= 10 ? remaining.length : 10;
+      const nextQuestions = [
+        ...remaining.slice(0, insertionIndex),
+        currentQuestion,
+        ...remaining.slice(insertionIndex),
+      ];
+
+      setTimeout(() => {
+        handleQuestionAdvance(nextQuestions);
+      }, 1500);
     }
   };
 
@@ -109,24 +141,19 @@ const VocabularyQuiz: React.FC = () => {
 
   const resetQuiz = () => {
     localStorage.removeItem("quizProgress");
-    setQuestions([]);
-    setCurrentIndex(0);
-    setScore(0);
+    setQuestions(createNewQuestionQueue());
     setSelectedAnswer(null);
     setIsAnswered(false);
     setShowResults(false);
     setShowResetConfirm(false);
-    // Re-randomize
-    const shuffled = [...vocabData].sort(() => Math.random() - 0.5);
-    const randomized = randomizeQuestions(shuffled);
-    setQuestions(randomized);
+    setQuestionKey((prev) => prev + 1);
   };
 
   const handleResetClick = () => {
     setShowResetConfirm(true);
   };
 
-  if (questions.length === 0) return <div>Loading...</div>;
+  if (questions.length === 0 && !showResults) return <div>Loading...</div>;
 
   if (showResults) {
     return (
@@ -138,35 +165,37 @@ const VocabularyQuiz: React.FC = () => {
         <div className="bg-white p-8 rounded-lg shadow-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Quiz Complete!</h2>
           <p className="text-lg mb-4">
-            Your score: {score} / {questions.length}
+            You completed the quiz — great work! Ready to go again?
           </p>
           <button
             onClick={resetQuiz}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Restart Quiz
+            Try Again
           </button>
         </div>
       </motion.div>
     );
   }
 
-  const currentQuestion = questions[currentIndex];
+  const currentQuestion = questions[0];
+  const completedCount = totalQuestions - questions.length;
+  const currentQuestionNumber = completedCount + 1;
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentIndex}
+          key={questionKey}
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -300, opacity: 0 }}
+          exit={{ x: exitDirection === "right" ? 300 : -300, opacity: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
         >
           <div className="flex items-center justify-between gap-4 mb-4">
             <p className="text-sm text-gray-600 font-medium">
-              {currentIndex + 1} / {questions.length}
+              {currentQuestionNumber} / {totalQuestions}
             </p>
             <h2 className="flex-1 text-center text-xl font-semibold">
               {currentQuestion.word}
