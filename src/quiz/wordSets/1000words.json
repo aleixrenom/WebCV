@@ -2,7 +2,7 @@
   {
     "word": "kuin",
     "correct": "as",
-    "options": ["as", "than", "like", "since"]
+    "options": ["as", "more", "less", "even"]
   },
   {
     "word": "minä",
@@ -12,7 +12,7 @@
   {
     "word": "hänen",
     "correct": "his",
-    "options": ["his", "her", "their", "its"]
+    "options": ["his", "he", "their", "they"]
   },
   {
     "word": "että",
@@ -22,7 +22,7 @@
   {
     "word": "hän",
     "correct": "he",
-    "options": ["he", "she", "it", "they"]
+    "options": ["he", "his", "their", "they"]
   },
   {
     "word": "oli",
@@ -62,7 +62,7 @@
   {
     "word": "klo",
     "correct": "at",
-    "options": ["at", "in", "on", "by"]
+    "options": ["at", "in", "on", "after"]
   },
   {
     "word": "yksi",
@@ -72,7 +72,7 @@
   {
     "word": "on",
     "correct": "have",
-    "options": ["have", "has", "had", "own"]
+    "options": ["have", "get", "give", "take"]
   },
   {
     "word": "tämä",
@@ -117,7 +117,7 @@
   {
     "word": "on",
     "correct": "is",
-    "options": ["is", "am", "are", "was"]
+    "options": ["is", "does", "seems", "was"]
   },
   {
     "word": "se",
@@ -145,9 +145,9 @@
     "options": ["and", "but", "or", "so"]
   },
   {
-    "word": "a",
-    "correct": "a",
-    "options": ["a", "an", "the", "some"]
+    "word": "vika",
+    "correct": "fault",
+    "options": ["fault", "bug", "form", "risk"]
   },
   {
     "word": "sisään",
@@ -162,7 +162,7 @@
   {
     "word": "voida",
     "correct": "can",
-    "options": ["can", "could", "must", "might"]
+    "options": ["can", "cannot", "must", "might"]
   },
   {
     "word": "ulos",
@@ -240,9 +240,9 @@
     "options": ["does", "do", "did", "done"]
   },
   {
-    "word": "asettaa",
-    "correct": "set",
-    "options": ["set", "put", "place", "lay"]
+    "word": "tarkenee",
+    "correct": "warm enough",
+    "options": ["warm enough", "too cold", "dangerous", "exciting"]
   },
   {
     "word": "kolme",
@@ -277,7 +277,7 @@
   {
     "word": "pieni",
     "correct": "small",
-    "options": ["small", "little", "tiny", "short"]
+    "options": ["small", "big", "tall", "short"]
   },
   {
     "word": "loppu",
@@ -407,7 +407,7 @@
   {
     "word": "pois",
     "correct": "off",
-    "options": ["off", "on", "away", "back"]
+    "options": ["off", "on", "in", "back"]
   },
   {
     "word": "tarve",
@@ -492,7 +492,7 @@
   {
     "word": "uusi",
     "correct": "new",
-    "options": ["new", "old", "modern", "fresh"]
+    "options": ["new", "old", "young", "fresh"]
   },
   {
     "word": "työ",
@@ -505,9 +505,9 @@
     "options": ["any", "all", "some", "none"]
   },
   {
-    "word": "uusi",
-    "correct": "new",
-    "options": ["new", "old", "used", "recent"]
+    "word": "uusia",
+    "correct": "renew",
+    "options": ["renew", "repeat", "try", "bolster"]
   },
   {
     "word": "työ",
@@ -605,7 +605,7 @@
     "options": ["good", "bad", "better", "best"]
   },
   {
-    "word": "minun",
+    "word": "minä",
     "correct": "me",
     "options": ["me", "you", "him", "us"]
   },
@@ -747,7 +747,7 @@
   {
     "word": "hän",
     "correct": "she",
-    "options": ["she", "he", "it", "they"]
+    "options": ["she", "hers", "their", "they"]
   },
   {
     "word": "kaikki",
@@ -831,8 +831,8 @@
   },
   {
     "word": "hänen",
-    "correct": "her",
-    "options": ["her", "his", "their", "its"]
+    "correct": "hers",
+    "options": ["hers", "her", "their", "them"]
   },
   {
     "word": "pitkä",
@@ -856,8 +856,8 @@
   },
   {
     "word": "häntä",
-    "correct": "him",
-    "options": ["him", "her", "them", "us"]
+    "correct": "him/her",
+    "options": ["him/her", "he/she", "them", "us"]
   },
   {
     "word": "kaksi",
@@ -867,7 +867,7 @@
   {
     "word": "on",
     "correct": "has",
-    "options": ["has", "had", "have", "own"]
+    "options": ["has", "had", "would", "must"]
   },
   {
     "word": "katsoa",
@@ -932,7 +932,7 @@
   {
     "word": "minun",
     "correct": "my",
-    "options": ["my", "your", "his", "her"]
+    "options": ["my", "your", "his/her", "their"]
   },
   {
     "word": "yli",
@@ -952,7 +952,7 @@
   {
     "word": "kuin",
     "correct": "than",
-    "options": ["than", "as", "like", "more"]
+    "options": ["than", "those", "these", "more"]
   },
   {
     "word": "soita",
@@ -971,8 +971,8 @@
   },
   {
     "word": "voi",
-    "correct": "may",
-    "options": ["may", "must", "might", "can"]
+    "correct": "butter",
+    "options": ["butter", "milk", "cream", "yoghurt"]
   },
   {
     "word": "alas",
@@ -2062,7 +2062,7 @@
   {
     "word": "odottaa",
     "correct": "wait",
-    "options": ["wait", "move", "stay", "leave"]
+    "options": ["wait", "move", "enter", "leave"]
   },
   {
     "word": "suunnitelma",
@@ -2406,8 +2406,8 @@
   },
   {
     "word": "asettaa",
-    "correct": "lay",
-    "options": ["lay", "sit", "stand", "lie"]
+    "correct": "set",
+    "options": ["set", "sit", "stand", "lie"]
   },
   {
     "word": "vastaan",
@@ -2725,9 +2725,9 @@
     "options": ["engine", "car", "tool", "part"]
   },
   {
-    "word": "asema",
-    "correct": "position",
-    "options": ["position", "place", "spot", "rank"]
+    "word": "akku",
+    "correct": "battery",
+    "options": ["battery", "charger", "cable", "plug"]
   },
   {
     "word": "varsi",
@@ -3537,7 +3537,7 @@
   {
     "word": "ratkaista",
     "correct": "solve",
-    "options": ["solve", "fix", "find", "lose"]
+    "options": ["solve", "try", "find", "lose"]
   },
   {
     "word": "metalli",
@@ -3572,7 +3572,7 @@
   {
     "word": "on",
     "correct": "shall",
-    "options": ["shall", "will", "must", "can"]
+    "options": ["shall", "would", "must", "can"]
   },
   {
     "word": "held",
@@ -3612,7 +3612,7 @@
   {
     "word": "polttaa",
     "correct": "burn",
-    "options": ["burn", "fire", "heat", "cold"]
+    "options": ["to burn", "to fire", "to chill", "to freeze"]
   },
   {
     "word": "mäki",
@@ -3922,7 +3922,7 @@
   {
     "word": "puhui",
     "correct": "spoke",
-    "options": ["spoke", "said", "told", "talked"]
+    "options": ["spoke", "said", "told", "discussed"]
   },
   {
     "word": "atomi",
@@ -3952,7 +3952,7 @@
   {
     "word": "odottaa",
     "correct": "expect",
-    "options": ["expect", "wait", "hope", "wish"]
+    "options": ["expect", "behave", "think", "leave"]
   },
   {
     "word": "luu",
@@ -4155,7 +4155,7 @@
     "options": ["clock", "watch", "time", "bell"]
   },
   {
-    "word": "mine",
+    "word": "minun",
     "correct": "mine",
     "options": ["mine", "yours", "ours", "theirs"]
   },
@@ -4195,9 +4195,9 @@
     "options": ["yellow", "blue", "red", "green"]
   },
   {
-    "word": "gun",
-    "correct": "gun",
-    "options": ["gun", "sword", "knife", "bow"]
+    "word": "ase",
+    "correct": "weapon",
+    "options": ["weapon", "tool", "cutlery", "device"]
   },
   {
     "word": "sallia",
@@ -4332,7 +4332,7 @@
   {
     "word": "asema",
     "correct": "station",
-    "options": ["station", "stop", "place", "post"]
+    "options": ["station", "stop sign", "place", "post"]
   },
   {
     "word": "isä",
@@ -4362,7 +4362,7 @@
   {
     "word": "tarjous",
     "correct": "offer",
-    "options": ["offer", "bid", "deal", "gift"]
+    "options": ["offer", "bid", "purchase", "gift"]
   },
   {
     "word": "segmentti",
