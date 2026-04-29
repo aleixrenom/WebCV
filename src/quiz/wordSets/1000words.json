@@ -332,7 +332,7 @@
   {
     "word": "maa",
     "correct": "land",
-    "options": ["land", "soil", "field", "ground"]
+    "options": ["land", "soil", "field", "area"]
   },
   {
     "word": "täällä",
@@ -477,7 +477,7 @@
   {
     "word": "maa",
     "correct": "earth",
-    "options": ["earth", "world", "planet", "ground"]
+    "options": ["earth", "world", "planet", "area"]
   },
   {
     "word": "isä",
@@ -486,8 +486,8 @@
   },
   {
     "word": "jokainen",
-    "correct": "any",
-    "options": ["any", "each", "all", "none"]
+    "correct": "everyone",
+    "options": ["everyone", "no-one", "everything", "everywhere"]
   },
   {
     "word": "uusi",
@@ -497,7 +497,7 @@
   {
     "word": "työ",
     "correct": "work",
-    "options": ["work", "job", "task", "duty"]
+    "options": ["work", "hobby", "obligation", "duty"]
   },
   {
     "word": "kaikki",
@@ -510,9 +510,9 @@
     "options": ["renew", "repeat", "try", "bolster"]
   },
   {
-    "word": "työ",
-    "correct": "work",
-    "options": ["work", "rest", "play", "hobby"]
+    "word": "saippua",
+    "correct": "soap",
+    "options": ["soap", "shampoo", "detergent", "lotion"]
   },
   {
     "word": "osa",
@@ -597,7 +597,7 @@
   {
     "word": "jokainen",
     "correct": "every",
-    "options": ["every", "each", "all", "some"]
+    "options": ["every", "none", "sometimes", "some"]
   },
   {
     "word": "hyvä",
@@ -937,7 +937,7 @@
   {
     "word": "yli",
     "correct": "over",
-    "options": ["over", "under", "below", "above"]
+    "options": ["over", "under", "below", "far"]
   },
   {
     "word": "tiedä",
@@ -1201,8 +1201,8 @@
   },
   {
     "word": "suorittaa",
-    "correct": "run",
-    "options": ["run", "walk", "sit", "sleep"]
+    "correct": "perform",
+    "options": ["perform", "walk", "sit", "exercise"]
   },
   {
     "word": "ei",
@@ -1937,12 +1937,12 @@
   {
     "word": "neiti",
     "correct": "miss",
-    "options": ["miss", "lady", "girl", "wife"]
+    "options": ["miss", "grandma", "girl", "wife"]
   },
   {
     "word": "toi",
-    "correct": "brought",
-    "options": ["brought", "took", "sent", "kept"]
+    "correct": "that",
+    "options": ["that", "them", "us", "those"]
   },
   {
     "word": "lämpö",
@@ -2247,7 +2247,7 @@
   {
     "word": "tilaa",
     "correct": "space",
-    "options": ["space", "room", "area", "spot"]
+    "options": ["space", "land", "city", "spot"]
   },
   {
     "word": "kuuli",
@@ -2516,8 +2516,8 @@
   },
   {
     "word": "sängyssä",
-    "correct": "bed",
-    "options": ["bed", "chair", "table", "floor"]
+    "correct": "in bed",
+    "options": ["in bed", "on the sofa", "on the table", "on the floor"]
   },
   {
     "word": "veli",
@@ -2895,9 +2895,9 @@
     "options": ["cow", "horse", "pig", "sheep"]
   },
   {
-    "word": "työ",
-    "correct": "job",
-    "options": ["job", "task", "work", "duty"]
+    "word": "tukos",
+    "correct": "blockage",
+    "options": ["blockage", "leak", "overflow", "pressure"]
   },
   {
     "word": "reuna",
@@ -2955,7 +2955,7 @@
     "options": ["million", "billion", "thousand", "hundred"]
   },
   {
-    "word": "bear",
+    "word": "karhu",
     "correct": "bear",
     "options": ["bear", "lion", "tiger", "wolf"]
   },
@@ -3021,8 +3021,8 @@
   },
   {
     "word": "rivi",
-    "correct": "row",
-    "options": ["row", "line", "column", "group"]
+    "correct": "line",
+    "options": ["line", "road", "column", "group"]
   },
   {
     "word": "suu",
@@ -3100,9 +3100,9 @@
     "options": ["break", "work", "play", "run"]
   },
   {
-    "word": "lady",
-    "correct": "lady",
-    "options": ["lady", "man", "boy", "girl"]
+    "word": "hankala",
+    "correct": "awkward",
+    "options": ["awkward", "boring", "complicated", "slow"]
   },
   {
     "word": "piha",
@@ -3455,7 +3455,7 @@
     "options": ["iron", "steel", "gold", "metal"]
   },
   {
-    "word": "single",
+    "word": "yksittäinen",
     "correct": "single",
     "options": ["single", "double", "one", "only"]
   },
@@ -3872,7 +3872,7 @@
   {
     "word": "tarjonta",
     "correct": "supply",
-    "options": ["supply", "need", "stock", "store"]
+    "options": ["supply", "need", "object", "store"]
   },
   {
     "word": "joiden",
@@ -4240,7 +4240,7 @@
     "options": ["lift", "stairs", "door", "floor"]
   },
   {
-    "word": "Rose",
+    "word": "ruusu",
     "correct": "rose",
     "options": ["rose", "lily", "tulip", "daisy"]
   },
@@ -4260,9 +4260,9 @@
     "options": ["track", "road", "path", "line"]
   },
   {
-    "word": "vanhempi",
-    "correct": "parent",
-    "options": ["parent", "child", "son", "aunt"]
+    "word": "vanhemmat",
+    "correct": "parents",
+    "options": ["parents", "children", "sons", "aunts"]
   },
   {
     "word": "rannikko",
